@@ -10,6 +10,8 @@ public class SnakeLadder {
 	
 	public static int totalDiceRolls = 0;
 	
+	public static int player = 2;
+	
 	
 	public static void main(String[] args) {
 		System.out.println("<--------Welcome to Snake And Ladder Game---------->");
@@ -47,7 +49,19 @@ public class SnakeLadder {
 			
 			totalDiceRolls++;
 			System.out.println("Player moves position: " + currentPosition);
+			
 		}
+	}
+	
+	
+	public static void switchPlayer() {
+		
+		if (player == 2) {
+			player = 1;
+		} else {
+			player = 2;
+		}
+
 	}
 
 	public static void playUntilWin() {
