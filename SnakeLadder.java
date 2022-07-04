@@ -7,11 +7,17 @@ public class SnakeLadder {
 	public static final int NO_PLAY = 0;
 	
 	public static int currentPosition = 0;
+	
+	public static int totalDiceRolls = 0;
+	
+	
 	public static void main(String[] args) {
 		System.out.println("<--------Welcome to Snake And Ladder Game---------->");
 		playUntilWin();
 		
 		System.out.println("Player won game...");
+		
+		System.out.println("Total dice roll: " + totalDiceRolls);
 	}
 
 	public static void playerPositionMoves() {
@@ -37,6 +43,9 @@ public class SnakeLadder {
 			} else if (currentPosition > 100) {
 				currentPosition -= diceNumber;
 			}
+			
+			
+			totalDiceRolls++;
 			System.out.println("Player moves position: " + currentPosition);
 		}
 	}
